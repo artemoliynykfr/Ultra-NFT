@@ -1127,6 +1127,11 @@ section {
   color: #FFFFFF;
 }
 
+.collection__rate img {
+  width: 24px;
+  height: 24px;
+}
+
 .sellers__items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -1459,7 +1464,7 @@ section {
     z-index: 9999;
     background: #030812;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   .header.active::-webkit-scrollbar {
