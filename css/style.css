@@ -1128,6 +1128,7 @@ section {
 }
 
 .collection__rate img {
+  max-width: 24px;
   width: 24px;
   height: 24px;
 }
