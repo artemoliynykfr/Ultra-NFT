@@ -542,7 +542,8 @@ section {
   height: 1015px;
   position: absolute;
   right: -408px;
-  top: 700px;
+  bottom: 0px;
+  z-index: -1;
 }
 
 .decor--last .decor__item {
@@ -1176,7 +1177,9 @@ section {
   display: none;
 }
 
-.picks__item.hidden {
+.picks__item:first-child,
+.picks__item:nth-child(2),
+.picks__item:nth-child(3) {
   display: block;
 }
 
@@ -1272,6 +1275,7 @@ section {
           justify-content: center;
   margin: 0 auto;
   padding: 0;
+  cursor: pointer;
 }
 
 .picks__button:hover img {
