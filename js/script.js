@@ -73,26 +73,6 @@ button.addEventListener('click', function(e) {
 	current += 3;
 })
 // dropdown
-/* $(document).ready(function () {
-	$('#dropdown1').click(function (event) {
-		$('#dropdown1, #content1').toggleClass('active');
-	});
-	$('#dropdown2').click(function (event) {
-		$('#dropdown2, #content2').toggleClass('active');
-	});
-	$('#dropdown3').click(function (event) {
-		$('#dropdown3, #content3').toggleClass('active');
-	});
-	$('#dropdown4').click(function (event) {
-		$('#dropdown4, #content4').toggleClass('active');
-	});
-	$('#dropdown5').click(function (event) {
-		$('#dropdown5, #content5').toggleClass('active');
-	});
-	$('.filter__burger').click(function (event) {
-		$('.filter__burger, .filter__items, .filter').toggleClass('active');
-	});
-}) */
 let dropdown1 = document.querySelector('#dropdown1')
 let dropdown2 = document.querySelector('#dropdown2')
 let dropdown3 = document.querySelector('#dropdown3')
