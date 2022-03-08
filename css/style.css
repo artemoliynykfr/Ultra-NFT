@@ -431,6 +431,8 @@
 
 .auction__swiper {
   margin-top: 64px;
+  height: 100%;
+  max-height: 100%;
 }
 
 .swiper-pagination {
@@ -939,167 +941,39 @@
 }
 
 .section__decor .decor {
+  position: absolute;
+  background-size: 120% 120% !important;
   width: 886px;
   height: 886px;
-  background: -o-linear-gradient(14.04deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
-  background: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
-  opacity: 0.4;
-  -webkit-filter: blur(120px);
-          filter: blur(120px);
-  position: absolute;
-  z-index: 0;
-  border-radius: 50%;
 }
 
 .section__decor .decor--first {
   right: -141px;
   top: -286px;
+  background: url(..//img/pseudo1.png) center no-repeat;
 }
 
 .section__decor .decor--second {
   left: -277px;
   top: 915px;
+  background: url(..//img/pseudo2.png) center no-repeat;
+  background-size: 110% 110% !important;
 }
 
 .section__decor .decor--third {
   width: 1288.21px;
   height: 1022px;
-  opacity: 0.4;
-  background: none;
-  -webkit-filter: none;
-          filter: none;
-  position: absolute;
   top: 2648px;
   left: calc(50% - 644.105px);
-}
-
-.section__decor .decor--third .decor__item {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 837.26px;
-  height: 570.21px;
-  background: #FFAA6C;
-  -webkit-filter: blur(400px);
-          filter: blur(400px);
-  -webkit-transform: rotate(21.91deg);
-      -ms-transform: rotate(21.91deg);
-          transform: rotate(21.91deg);
-  z-index: 3;
-}
-
-.section__decor .decor--third::after {
-  content: "";
-  position: absolute;
-  left: calc(50% - 481.42px);
-  top: calc(50% - 386.79px);
-  width: 962.84px;
-  height: 773.58px;
-  background: #FF007E;
-  -webkit-filter: blur(400px);
-          filter: blur(400px);
-  z-index: 2;
-}
-
-.section__decor .decor--third::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 1123.88px;
-  height: 902.71px;
-  background: #EA72FF;
-  -webkit-filter: blur(600px);
-          filter: blur(600px);
-  z-index: 1;
+  background: url(..//img/pseudo3.png) center no-repeat;
 }
 
 .section__decor .decor--last {
-  background: none;
-  -webkit-filter: none;
-          filter: none;
   width: 1391.82px;
   height: 1015px;
-  position: absolute;
   right: -408px;
-  top: 3829px;
-  z-index: -1;
-}
-
-.section__decor .decor--last .decor__item {
-  position: absolute;
-  -webkit-filter: blur(400px);
-          filter: blur(400px);
-  border-radius: 50%;
-}
-
-.section__decor .decor--last .decor__item:first-child {
-  right: 0;
-  bottom: 85px;
-  width: 458.94px;
-  height: 458.94px;
-  background: #7F9FFF;
-}
-
-.section__decor .decor--last .decor__item:nth-child(2) {
-  right: 344px;
-  bottom: 81px;
-  width: 441.76px;
-  height: 345.46px;
-  background: #82FFF9;
-  -webkit-filter: blur(300px);
-          filter: blur(300px);
-  -webkit-transform: rotate(-15.22deg);
-      -ms-transform: rotate(-15.22deg);
-          transform: rotate(-15.22deg);
-}
-
-.section__decor .decor--last .decor__item:nth-child(3) {
-  left: 184px;
-  bottom: 107px;
-  width: 424.39px;
-  height: 84.1px;
-  background: #D015FF;
-  -webkit-filter: blur(300px);
-          filter: blur(300px);
-  -webkit-transform: rotate(-31.01deg);
-      -ms-transform: rotate(-31.01deg);
-          transform: rotate(-31.01deg);
-}
-
-.section__decor .decor--last .decor__item:nth-child(4) {
-  right: 84px;
-  top: 11.5px;
-  width: 961.04px;
-  height: 572.6px;
-  background: #FFE198;
-  -webkit-transform: rotate(-7.32deg);
-      -ms-transform: rotate(-7.32deg);
-          transform: rotate(-7.32deg);
-}
-
-.section__decor .decor--last .decor__item:nth-child(5) {
-  left: 0;
-  top: 0;
-  width: 467.6px;
-  height: 660.73px;
-  background: #FF3278;
-  -webkit-transform: rotate(12.08deg);
-      -ms-transform: rotate(12.08deg);
-          transform: rotate(12.08deg);
-}
-
-.section__decor .decor--last .decor__item:last-child {
-  left: 374px;
-  bottom: 0;
-  width: 196.19px;
-  height: 387.23px;
-  background: #5D85FF;
-  -webkit-filter: blur(200px);
-          filter: blur(200px);
-  -webkit-transform: rotate(49.25deg);
-      -ms-transform: rotate(49.25deg);
-          transform: rotate(49.25deg);
+  top: 4029px;
+  background: url(..//img/pseudo4.png) center no-repeat;
 }
 
 .footer__body {
@@ -1201,9 +1075,12 @@ li:hover a.footer__text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 17px;
   margin-bottom: 80px;
   width: auto;
+}
+
+.footer__list li {
+  margin-bottom: 17px;
 }
 
 .footer__list .footer__title {
@@ -1658,25 +1535,7 @@ picture {
     left: 5%;
   }
 
-  .section__decor .decor--third .decor__item {
-    width: 64%;
-    height: 55%;
-  }
-
-  .section__decor .decor--third::after {
-    width: 74%;
-    height: 75%;
-    left: 13%;
-    top: 12.5%;
-  }
-
-  .section__decor .decor--third::before {
-    width: 87%;
-    height: 88%;
-  }
-
   .section__decor .decor--last {
-    top: 1400px;
     width: calc(400px + 991.82 * (100vw - 300px) / 870);
     height: calc(300px + 715 * (100vw - 300px) / 870);
   }
@@ -1753,7 +1612,7 @@ picture {
   }
 
   .collection__container .collection__title {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .collection__items {
@@ -1980,8 +1839,16 @@ picture {
     text-align: center;
   }
 
+  .auction__container .auction__title {
+    margin-bottom: 20px;
+  }
+
   .sellers__item:nth-child(8) {
     grid-area: auto;
+  }
+
+  .section__decor .decor {
+    display: none;
   }
 
   .footer__body {
@@ -2120,10 +1987,6 @@ picture {
     top: 30px;
   }
 
-  .section__decor .decor {
-    display: none;
-  }
-
   .footer__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2177,3 +2040,11 @@ picture {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
   }
 }
+
+.webp .section__decor .decor--first { background: url(..//img/pseudo1.webp) center no-repeat; }
+
+.webp .section__decor .decor--second { background: url(..//img/pseudo2.webp) center no-repeat; }
+
+.webp .section__decor .decor--third { background: url(..//img/pseudo3.webp) center no-repeat; }
+
+.webp .section__decor .decor--last { background: url(..//img/pseudo4.webp) center no-repeat; }
