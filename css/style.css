@@ -889,6 +889,7 @@
   transition: all 400ms ease 0s;
   font-weight: bold;
   font-style: normal;
+  z-index: 99;
 }
 
 .dropdown__button.active {
@@ -905,7 +906,7 @@
   display: grid;
   overflow: auto;
   position: absolute;
-  z-index: 100;
+  z-index: 98;
   min-width: 100%;
   background: #3C485D;
   border-radius: 0 0 12px 12px;
@@ -929,6 +930,7 @@
       -ms-transform: translate(0, -1px);
           transform: translate(0, -1px);
   opacity: 1;
+  z-index: 99;
 }
 
 .section__decor {
@@ -943,6 +945,32 @@
   background-size: 120% 120% !important;
   width: 886px;
   height: 886px;
+  -webkit-animation: rotate1 15s 0s linear infinite;
+          animation: rotate1 15s 0s linear infinite;
+}
+
+@-webkit-keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .section__decor .decor--first {
@@ -1746,6 +1774,10 @@ picture {
             justify-content: center;
     height: 56px;
     padding: 0;
+  }
+
+  .dropdown__items {
+    z-index: 0;
   }
 
   .footer__body {
