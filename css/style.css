@@ -1183,12 +1183,6 @@ picture {
   border: 1px solid #ffffff;
 }
 
-.main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
 .js-scroll {
   opacity: 0;
   -webkit-transition: opacity 0ms;
