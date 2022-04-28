@@ -1191,36 +1191,36 @@ picture {
 
 .js-scroll {
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 0ms;
+  -o-transition: opacity 0ms;
+  transition: opacity 0ms;
 }
 
 .js-scroll.scrolled {
   opacity: 1;
 }
 
-.js-scroll.fade-in {
+.js-scroll.scrolled.fade-in {
   -webkit-animation: fade-in 1s ease-in-out 0s;
           animation: fade-in 1s ease-in-out 0s;
 }
 
-.js-scroll.slide-in-left {
+.js-scroll.scrolled.slide-in-left {
   -webkit-animation: slide-in-left 1s ease-in-out 0s;
           animation: slide-in-left 1s ease-in-out 0s;
 }
 
-.js-scroll.slide-in-top {
+.js-scroll.scrolled.slide-in-top {
   -webkit-animation: slide-in-top 1s ease-in-out 0s;
           animation: slide-in-top 1s ease-in-out 0s;
 }
 
-.js-scroll.slide-in-bottom {
+.js-scroll.scrolled.slide-in-bottom {
   -webkit-animation: slide-in-bottom 1s ease-in-out 0s;
           animation: slide-in-bottom 1s ease-in-out 0s;
 }
 
-.js-scroll.slide-in-right {
+.js-scroll.scrolled.slide-in-right {
   -webkit-animation: slide-in-right 1s ease-in-out 0s;
           animation: slide-in-right 1s ease-in-out 0s;
 }
@@ -1903,12 +1903,12 @@ picture {
             align-items: center;
   }
 
-  .js-scroll.slide-in-left {
+  .js-scroll.scrolled.slide-in-left {
     -webkit-animation: slide-in-top 0.6s ease-in-out 0s;
             animation: slide-in-top 0.6s ease-in-out 0s;
   }
 
-  .js-scroll.slide-in-right {
+  .js-scroll.scrolled.slide-in-right {
     -webkit-animation: fade-in-top 0.6s ease-in-out 0s;
             animation: fade-in-top 0.6s ease-in-out 0s;
   }
