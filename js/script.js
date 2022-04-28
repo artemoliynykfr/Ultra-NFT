@@ -117,9 +117,7 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => {
    handleScrollAnimation();
 });
-window.addEventListener("load", () => {
-   handleScrollAnimation();
-});
+
 // dropdown
 if (document.querySelector('.body__explore')) {
 	function openTab(evt, tabName) {
