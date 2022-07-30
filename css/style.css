@@ -1207,6 +1207,7 @@ picture {
     height: 20px;
     z-index: 1000;
     cursor: pointer;
+    pointer-events: all;
   }
 
   .header__burger::after,
@@ -1479,6 +1480,7 @@ picture {
 
   .filter__burger {
     position: absolute;
+    pointer-events: all;
     top: calc(50% - 10px);
     left: 20px;
     width: 30px;
