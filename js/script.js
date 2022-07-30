@@ -111,7 +111,6 @@ if (document.querySelector('.body__explore')) {
 			}
 		})
 	}
-
 	function burgerMenu() {
 		const burger = document.querySelector('.filter__burger')
 		const menu = document.querySelector('.filter__items')

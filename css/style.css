@@ -836,6 +836,7 @@
   background-size: 120% 120% !important;
   width: 886px;
   height: 886px;
+  z-index: -1;
   -webkit-animation: rotate1 15s 0s linear infinite;
           animation: rotate1 15s 0s linear infinite;
 }
@@ -1063,6 +1064,7 @@ body .overlay {
   min-height: 100vh;
   height: 100%;
   overflow: hidden;
+  z-index: 0;
 }
 
 .main {
