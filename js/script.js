@@ -13,22 +13,32 @@ testWebP(function (support) {
 	}
 });
 // header burger
-function burger() {
-	let header__burger = document.querySelector('.header__burger'),
-		header__menu = document.querySelector('.header__menu'),
-		header__form = document.querySelector('.header__form'),
-		header__list = document.querySelector('.header__list'),
-		header__button = document.querySelector('.header__button'),
-		header = document.querySelector('.header');
-	header__burger.addEventListener('click', function () {
-		if (header__burger.classList.contains('active'), header__menu.classList.contains('active'), header.classList.contains('active') || header__form.classList.contains('active'), header__list.classList.contains('active'), header__button.classList.contains('active')) {
-			header__burger.classList.remove('active') || header__menu.classList.remove('active') || header.classList.remove('active') || header__form.classList.remove('active'), header__list.classList.remove('active'), header__button.classList.remove('active')
+function burgerMenu() {
+	const burger = document.querySelector('.header__burger')
+	const menu = document.querySelector('.header__menu')
+	const form = document.querySelector('.header__form')
+	const list = document.querySelector('.header__list')
+	const button = document.querySelector('.header__button')
+	const body = document.querySelector('body')
+	burger.addEventListener('click', () => {
+		if (!menu.classList.contains('active')) {
+			menu.classList.add('active')
+			list.classList.add('active')
+			button.classList.add('active')
+			form.classList.add('active')
+			burger.classList.add('active')
+			body.classList.add('locked')
 		} else {
-			header__burger.classList.add('active') || header__menu.classList.add('active') || header.classList.add('active') || header__form.classList.add('active'), header__list.classList.add('active'), header__button.classList.add('active')
+			menu.classList.remove('active')
+			burger.classList.remove('active')
+			button.classList.remove('active')
+			form.classList.remove('active')
+			body.classList.remove('locked')
+			list.classList.remove('active')
 		}
 	})
 }
-burger();
+burgerMenu();
 function fixedNav() {
 	const nav = document.querySelector('.header')
 	const breakpoint = 1
@@ -49,13 +59,13 @@ if (document.querySelector('.body__home')) {
 		slidesPerView: 4,
 		spaceBetween: 30,
 		breakpoints: {
-			1420: {
+			1500: {
 				slidesPerView: 4,
 			},
-			1050: {
+			1170: {
 				slidesPerView: 3,
 			},
-			700: {
+			768: {
 				slidesPerView: 2,
 			},
 			0: {
@@ -86,30 +96,34 @@ button.addEventListener('click', function (e) {
 })
 // dropdown
 if (document.querySelector('.body__explore')) {
-	function openTab(evt, tabName) {
-		let i, tabcontent, tablinks;
-		tabcontent = document.getElementsByClassName('dropdown__items');
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-		tablinks = document.getElementsByClassName('dropdown__button');
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-		document.getElementById(tabName).style.display = "flex";
-		evt.currentTarget.className += " active";
-	}
-
-	function burger() {
-		let header__burger = document.querySelector('.filter__burger'),
-			header__menu = document.querySelector('.filter__items');
-		header__burger.addEventListener('click', function () {
-			if (header__burger.classList.contains('active'), header__menu.classList.contains('active')) {
-				header__burger.classList.remove('active') || header__menu.classList.remove('active')
+	let dropdowns = document.querySelectorAll('.dropdown')
+	for (let i = 0; i < dropdowns.length; i++) {
+		let dropdown = dropdowns[i]
+		let tablink = dropdown.querySelector('.dropdown__button');
+		let tabcontent = dropdown.querySelector('.dropdown__items');
+		tablink.addEventListener('click', () => {
+			if (tabcontent.classList.contains('active')) {
+				tabcontent.classList.remove('active')
+				tablink.classList.remove('active')
 			} else {
-				header__burger.classList.add('active') || header__menu.classList.add('active')
+				tabcontent.classList.add('active')
+				tablink.classList.add('active')
 			}
 		})
 	}
-	burger();
+
+	function burgerMenu() {
+		const burger = document.querySelector('.filter__burger')
+		const menu = document.querySelector('.filter__items')
+		burger.addEventListener('click', () => {
+			if (!menu.classList.contains('active')) {
+				menu.classList.add('active')
+				burger.classList.add('active')
+			} else {
+				menu.classList.remove('active')
+				burger.classList.remove('active')
+			}
+		})
+	}
+	burgerMenu();
 }
